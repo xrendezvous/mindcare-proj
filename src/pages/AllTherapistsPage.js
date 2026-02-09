@@ -45,17 +45,17 @@ const AllTherapistsPage = () => {
                     const lastDigit = years % 10;
                     const lastTwoDigits = years % 100;
 
-                    if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
-                        return `${years} років`;
-                    }
-
-                    if (lastDigit === 1) {
-                        return `${years} рік`;
-                    }
-
-                    if (lastDigit >= 2 && lastDigit <= 4) {
-                        return `${years} роки`;
-                    }
+                    // if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+                    //     return `${years} років`;
+                    // }
+                    //
+                    // if (lastDigit === 1) {
+                    //     return `${years} рік`;
+                    // }
+                    //
+                    // if (lastDigit >= 2 && lastDigit <= 4) {
+                    //     return `${years} роки`;
+                    // }
 
                     return `${years} років`;
                 };
