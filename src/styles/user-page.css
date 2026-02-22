@@ -1,0 +1,183 @@
+:root {
+    --main-color: #00410a;
+    --secondary-color: #222;
+    --font-family: "Craftwork Grotesk", sans-serif;
+}
+
+.card, .card-two, .card-doc {
+    padding-left: 10%;
+    width: 90%;
+    display: flex;
+    color: var(--main-color);
+    font-family: var(--font-family);
+}
+
+.card, .card-two {
+    padding-top: 2%;
+    padding-bottom: 50px;
+    max-width: 1200px;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.card-two {
+    margin-top: 30px;
+}
+
+.card-doc {
+    flex-wrap: wrap;
+    gap: 4%;
+    padding-left: 5%;
+}
+
+.section {
+    flex: 1;
+}
+
+.section-doc {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    padding: 0 10px;
+}
+
+.section-title, .info-item, .info-label, .appointment-item, .appointment-item p {
+    color: var(--main-color);
+}
+
+.section-title {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.info-label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.info-value {
+    margin-left: 10px;
+    color: var(--secondary-color);
+}
+
+.doc-photo {
+    width: 330px;
+    height: 330px;
+    margin-left: 100px;
+}
+
+#gen-ttl {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.mydict-doc .lol {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0 50px;
+    justify-content: center;
+}
+
+.mydict-doc input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.mydict-doc input[type="radio"]:checked + span {
+    box-shadow: 0 0 0 0.0625em var(--main-color);
+    background-color: #d9f99d;
+    z-index: 1;
+    color: var(--main-color);
+}
+
+.edit-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.edit-btn {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+    background-color: #016c12;
+    transform: translateY(-2px);
+}
+
+.edit-btn:active {
+    background-color: #003507;
+    transform: translateY(0);
+}
+
+.appointment-item {
+    margin-bottom: 45px;
+    padding: 10px 30px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+
+.appointment-item p {
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+
+.app-section-content-doc {
+    min-height: 53vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cancel-btn, .edit-btn {
+    background: var(--main-color);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.cancel-btn:hover, .edit-btn:hover {
+    opacity: 0.9;
+}
+
+
+.delete-account-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+
+.delete-account-btn {
+    padding: 10px 24px;
+    border-radius: 5px;
+    border: 1px solid #b91c1c;
+    background-color: #ef4444;
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete-account-btn:hover {
+    background-color: #dc2626;
+}

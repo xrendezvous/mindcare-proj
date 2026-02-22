@@ -1,0 +1,275 @@
+.therapist-detail-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Craftwork Grotesk", sans-serif;
+}
+
+.therapist-card {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: "Craftwork Grotesk", sans-serif;
+}
+
+.therapist-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.therapist-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.therapist-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00410a;
+    margin-bottom: 20px;
+}
+
+.book-session-btn {
+    padding: 13px 18px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #00410a;
+    background-color: #fef9c3;
+    border: 2px solid #00410a;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-family: "Craftwork Grotesk", sans-serif;
+    max-width: 60%;
+    margin-top: 5px;
+}
+
+.book-session-btn:hover {
+    background-color: #00410a;
+    color: #fcfec3;
+}
+
+.therapist-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 18px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+    padding-top: 8px;
+    margin-left: 20px;
+}
+
+.therapist-specialization {
+    margin-top: 20px;
+}
+
+.therapist-specialization h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00410a;
+    margin-bottom: 10px;
+}
+
+.therapist-specialization ul {
+    font-size: 1rem;
+    color: #00410a;
+    list-style-type: disc;
+}
+
+.therapist-details {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.therapist-details p,
+.therapist-details-two p {
+    margin-left: 40px;
+}
+
+.details-line {
+    display: flex;
+    align-items: center;
+}
+
+.details-line img {
+    margin-right: 8px;
+}
+
+.therapist-details-two {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ther-image {
+    width: 31px;
+    height: 31px;
+}
+
+.therapist-specialization ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.therapist-specialization li {
+    margin-bottom: 5px;
+}
+
+#langimg {
+    width: 22px;
+    height: 22px;
+}
+
+.therapist-specialization {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+    margin-right: 15px;
+    background-color: #d9f99d;
+    padding: 20px 20px 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: fit-content;
+}
+
+.therapist-languages {
+    margin-top: 45px;
+    font-size: 18px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.therapist-languages p {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+:focus {
+    outline: 0;
+    border-color: #00410a;
+    box-shadow: 0 0 0 4px #d9f99d;
+}
+
+.mydict div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.mydict input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+.mydict input[type="radio"]:checked + span {
+    box-shadow: 0 0 0 0.0625em #00410a;
+    background-color: #d9f99d;
+    z-index: 1;
+    color: #00410a;
+}
+
+label span {
+    display: block;
+    cursor: pointer;
+    background-color: #fef9c3;
+    padding: 0.375em .75em;
+    position: relative;
+    margin-left: .0625em;
+    box-shadow: 0 0 0 0.0625em #00410a;
+    letter-spacing: .05em;
+    color: #00410a;
+    text-align: center;
+    transition: background-color .5s ease;
+    font-size: 18px;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+label:first-child span {
+    border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+    border-radius: 0 .375em .375em 0;
+}
+
+.section-content {
+    font-size: 18px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+    margin-right: 15px;
+    background-color: #d9f99d;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: fit-content;
+    margin-bottom: 30px;
+    max-width: 70%;
+    justify-self: center;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.calendar-section {
+    max-width: 80%;
+    justify-self: center;
+}
+
+.calendar-section h3 {
+    justify-self: center;
+    margin-top: 7%;
+    font-size: 25px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.details-line-two {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.accordion-container {
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.custom-accordion-content {
+    font-size: 16px;
+    color: #00410a;
+    font-family: "Craftwork Grotesk", sans-serif;
+    font-weight: bold;
+}

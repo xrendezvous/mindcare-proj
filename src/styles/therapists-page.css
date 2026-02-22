@@ -1,0 +1,189 @@
+:root {
+    --color-primary: #00410a;
+    --color-secondary: #fcfec3;
+    --color-hover: #002005;
+    --color-highlight: #F1F3BA;
+    --color-accent: rgba(217, 249, 157, 0.2);
+    --font-family-main: 'Craftwork Grotesk', sans-serif;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    padding: 20px 0;
+    margin: 0 auto;
+    font-family: var(--font-family-main);
+}
+
+.cards-container > * {
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    box-sizing: border-box;
+}
+
+.all-terapists-container {
+    align-items: center;
+    font-family: var(--font-family-main);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1380px;
+    width: 100%;
+    margin: 40px auto 0;
+    position: relative;
+    gap: 20px;
+}
+
+.dropdown, .dropdowna {
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    position: absolute;
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0 0 100vw 100vh rgba(0, 0, 0, 0.1);
+    margin-top: 2px;
+    gap: 20px;
+    font-family: var(--font-family-main);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.dropdown {
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+}
+
+.dropdowna {
+    grid-template-columns: repeat(1, 1fr);
+    width: 20%;
+}
+
+.apply-button {
+    padding: 8px 16px;
+    background-color: #00410a;
+    color: #fcfec3;
+    border: #00410a 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dropdowna .apply-button,
+.dropdowna .clear-button {
+    width: 70%;
+}
+
+.apply-button:hover {
+    background-color: #002005;
+}
+
+.clear-button {
+    padding: 8px 16px;
+    background-color: #fcfec3;
+    color: #00410a;
+    border: #00410a 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.clear-button:hover {
+    background-color: #F1F3BA;
+}
+
+.filter-button {
+    background-color: #fcfec3;
+    color: #00410a;
+    padding: 10px;
+    border: #00410a 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dropdown input[type="checkbox"],
+.dropdowna input[type="checkbox"] {
+    appearance: none;
+    border: 2px solid #00410a;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    padding: 7px;
+    margin-bottom: -2px;
+}
+
+.dropdown input[type="checkbox"]:checked,
+.dropdowna input[type="checkbox"]:checked {
+    background-color: #00410a;
+}
+
+.dropdown input[type="checkbox"]:checked::before,
+.dropdowna input[type="checkbox"]:checked::before {
+    content: '✔';
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    color: #fff;
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #00410a;
+}
+
+input[type="radio"]:checked {
+    accent-color: #00410a;
+    border-color: #00410a;
+}
+
+.search-input {
+    width: 20%;
+    padding: 9px;
+    font-size: 15px;
+    border: 2px solid #00410a;
+    border-radius: 5px;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    color: #00410a;
+    background-color: rgba(217, 249, 157, 0.2);
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #00410a;
+    box-shadow: 0 0 5px rgba(0, 100, 0, 0.5);
+}
+
+input::placeholder {
+    color: #00410a;
+}
+
+.res {
+    font-family: 'Craftwork Grotesk', sans-serif;
+    color: #00410a;
+    margin-left: 40%;
+}
