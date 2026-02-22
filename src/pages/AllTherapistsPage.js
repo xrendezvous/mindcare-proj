@@ -88,7 +88,7 @@ const AllTherapistsPage = () => {
                         specialties: doctorSpecialties,
                         photo: doctor.doc_photo,
                         gender: doctor.doc_sex,
-                        meetFormat: doctor.meet_fomat,
+                        meetFormat: doctor.meet_format,
                     };
                 });
 
