@@ -45,17 +45,17 @@ const AllTherapistsPage = () => {
                     const lastDigit = years % 10;
                     const lastTwoDigits = years % 100;
 
-                    // if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
-                    //     return `${years} років`;
-                    // }
-                    //
-                    // if (lastDigit === 1) {
-                    //     return `${years} рік`;
-                    // }
-                    //
-                    // if (lastDigit >= 2 && lastDigit <= 4) {
-                    //     return `${years} роки`;
-                    // }
+                    if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+                        return `${years} років`;
+                    }
+
+                    if (lastDigit === 1) {
+                        return `${years} рік`;
+                    }
+
+                    if (lastDigit >= 2 && lastDigit <= 4) {
+                        return `${years} роки`;
+                    }
 
                     return `${years} років`;
                 };
@@ -104,6 +104,55 @@ const AllTherapistsPage = () => {
         fetchData();
     }, []);
 
+    const handleFilter = (selected) => {
+        setSelectedCategories(selected);
+    };
+
+    const handleSpecializationFilter = (selectedSpecializations) => {
+        setSelectedSpecializations(selectedSpecializations);
+    };
+
+    const handleGenderFilter = (selectedGender) => {
+        setSelectedGender(selectedGender);
+    };
+
+    const handleMeetFormatFilter = (selectedMeetFormat) => {
+        setSelectedMeetFormat(selectedMeetFormat);
+    };
+
+    const filteredTherapists = therapists.filter(therapist =>
+        (selectedCategories.length === 0 || therapist.specialties.some(specialty => selectedCategories.includes(specialty))) &&
+        (selectedSpecializations.length === 0 || therapist.professions.some(prof => selectedSpecializations.includes(prof))) &&
+        (selectedGender.length === 0 || selectedGender.includes('Не важливо') || selectedGender.includes(therapist.gender)) &&
+        (selectedMeetFormat.length === 0 || selectedMeetFormat.includes('Не важливо') || selectedMeetFormat.includes(therapist.meetFormat)) &&
+        therapist.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    return (
+        <div className="all-therapists-container">
+            {loading ? (
+                <div className="banter-loader">
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                    <div className="banter-loader__box"></div>
+                </div>
+            ) : (
+                <div>
+                    <div className="cards-container">
+                        {filteredTherapists.map((therapist, index) => (
+                            <TerapistCard key={index} {...therapist} />
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 };
 
 export default AllTherapistsPage;
