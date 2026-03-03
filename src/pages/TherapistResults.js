@@ -3,8 +3,8 @@ import {useLocation} from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import supabase from '../config/databaseClient';
-import TerapistCard from "../components/TerapistCard";
-import '../styles/terapists-page.css';
+import TherapistCard from "../components/TherapistCard";
+import '../styles/therapists-page.css';
 import '../styles/loader.css';
 
 const TherapistResults = () => {
@@ -183,7 +183,7 @@ const TherapistResults = () => {
                     <div>
                         <div className="cards-container">
                             {therapists.map((therapist) => (
-                                <TerapistCard
+                                <TherapistCard
                                     key={therapist.doctor_id}
                                     name={`${therapist.first_name} ${therapist.last_name}`}
                                     experience={formatExperience(therapist.experience)}
