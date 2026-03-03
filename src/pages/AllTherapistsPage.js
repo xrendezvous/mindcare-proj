@@ -1,12 +1,21 @@
-import React, {useEffect, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import TherapistCard from "../components/TherapistCard";
+import "../styles/terapists-page.css";
 import supabase from '../config/databaseClient';
+import '../styles/loader.css';
 
 const AllTherapistsPage = () => {
-    const [setTherapists] = useState([]);
-    const [setCategories] = useState([]);
-    const [setSpecializations] = useState([]);
-    const [setLoading] = useState(true);
+    const [therapists, setTherapists] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [specializations, setSpecializations] = useState([]);
+    const [selectedSpecializations, setSelectedSpecializations] = useState([]);
+    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedGender, setSelectedGender] = useState([]);
+    const [selectedMeetFormat, setSelectedMeetFormat] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -88,7 +97,7 @@ const AllTherapistsPage = () => {
                         specialties: doctorSpecialties,
                         photo: doctor.doc_photo,
                         gender: doctor.doc_sex,
-                        meetFormat: doctor.meet_format,
+                        meetFormat: doctor.meet_fomat,
                     };
                 });
 
@@ -129,7 +138,18 @@ const AllTherapistsPage = () => {
     );
 
     return (
-        <div className="all-therapists-container">
+        <div className="all-terapists-container">
+            <Header/>
+            <div className="filters">
+                <input
+                    type="text"
+                    placeholder="Пошук"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="search-input"
+                />
+            </div>
+
             {loading ? (
                 <div className="banter-loader">
                     <div className="banter-loader__box"></div>
@@ -146,9 +166,10 @@ const AllTherapistsPage = () => {
                 <div>
                     <div className="cards-container">
                         {filteredTherapists.map((therapist, index) => (
-                            <TerapistCard key={index} {...therapist} />
+                            <TherapistCard key={index} {...therapist} />
                         ))}
                     </div>
+                    <Footer/>
                 </div>
             )}
         </div>
