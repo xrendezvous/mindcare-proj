@@ -1,0 +1,82 @@
+.findther-page {
+    position: relative;
+    display: flex;
+    height: 80vh;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    justify-content: center;
+}
+
+.findther-container {
+    width: 60%;
+    background-color: #fcfec3;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 10px;
+}
+
+.findther-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 7%;
+}
+
+.findther-container h2 {
+    font-size: 30px;
+    color: #00410a;
+    text-align: center;
+    padding: 10px;
+    margin-top: 3%;
+}
+
+label {
+    font-size: 16px;
+    color: #00410a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="radio"], input[type="number"], input[type="text"] {
+    border: 1px solid #E7E9AF;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #E7E9AF;
+    padding: 12px;
+    outline: none;
+    color: #00410a;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border-color: #00410a;
+}
+
+.findther-btn {
+    width: 40%;
+    padding: 12px;
+    background-color: #00410a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-right: 3%;
+}
+
+.findther-btn:hover {
+    background-color: #002005;
+}
+
+.findther-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
