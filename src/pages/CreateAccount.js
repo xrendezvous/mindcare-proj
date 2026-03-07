@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import '../styles/create-account.css';
+import {ReactComponent as Frame} from '../assets/Frame.svg';
 import supabase from '../config/databaseClient';
 
 const CreateAccount = () => {
@@ -164,6 +166,172 @@ const CreateAccount = () => {
             setError('Помилка при створенні акаунту: ' + (error.message || 'невідома помилка'));
         }
     };
+
+
+    return (
+        <div className="createacc-page">
+            <div className="logo">
+                <Frame className="frameIcon"/>
+                <div className="logoText">MindCare Students</div>
+            </div>
+
+            <div className="createacc-container">
+                <div className="header">
+                    <h2>Створити акаунт</h2>
+                    <p>Будь ласка, заповніть необхідні поля</p>
+                </div>
+
+                <form onSubmit={handleSubmit}>
+                    {/* КРОК 1 */}
+                    {currentStep === 1 && (
+                        <>
+                            <div className="input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Ім'я"
+                                    name="firstName"
+                                    value={formData.firstName}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Прізвище"
+                                    name="lastName"
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="input-container">
+                                <p>Оберіть свою стать: </p>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="gender"
+                                        checked={formData.gender === 'male'}
+                                        onChange={() => setFormData({...formData, gender: 'male'})}
+                                    />
+                                    Чоловік
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="gender"
+                                        checked={formData.gender === 'female'}
+                                        onChange={() => setFormData({...formData, gender: 'female'})}
+                                    />
+                                    Жінка
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="gender"
+                                        checked={formData.gender === 'another'}
+                                        onChange={() => setFormData({...formData, gender: 'another'})}
+                                    />
+                                    Інша
+                                </label>
+                            </div>
+
+                            <div className="input-container">
+                                <input
+                                    type="date"
+                                    name="birthDate"
+                                    value={formData.birthDate}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <button type="button" className="login-button" onClick={nextStep}>
+                                Далі
+                            </button>
+                        </>
+                    )}
+
+                    {/* КРОК 2 */}
+                    {currentStep === 2 && (
+                        <>
+                            <div className="input-container">
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Телефон"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Адреса"
+                                    name="address"
+                                    value={formData.address}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <button type="button" className="prev-button" onClick={prevStep}>
+                                Назад
+                            </button>
+                            <button type="button" className="login-button" onClick={nextStep}>
+                                Далі
+                            </button>
+                        </>
+                    )}
+
+                    {/* КРОК 3 */}
+                    {currentStep === 3 && (
+                        <>
+                            <div className="input-container">
+                                <input
+                                    type="text"
+                                    placeholder="Логін"
+                                    name="login"
+                                    value={formData.login}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="input-container">
+                                <input
+                                    type="password"
+                                    placeholder="Пароль"
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <button type="button" className="prev-button" onClick={prevStep}>
+                                Назад
+                            </button>
+                            <button type="submit" className="login-button">
+                                Завершити
+                            </button>
+                        </>
+                    )}
+                </form>
+
+                {error && <div className="error">{error}</div>}
+            </div>
+
+            <div className="pattern"></div>
+        </div>
+    );
 };
 
 export default CreateAccount;
