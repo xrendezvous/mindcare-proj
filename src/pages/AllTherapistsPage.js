@@ -4,6 +4,10 @@ import Footer from '../components/Footer';
 import TherapistCard from "../components/TherapistCard";
 import "../styles/terapists-page.css";
 import supabase from '../config/databaseClient';
+import FilterComponent from '../components/FilterComponent';
+import SpecializationFilter from "../components/SpecializationFilter";
+import GenderFilter from "../components/GenderFilter";
+import MeetFormatFilter from "../components/MeetFormatFilter";
 import '../styles/loader.css';
 
 const AllTherapistsPage = () => {
@@ -138,9 +142,14 @@ const AllTherapistsPage = () => {
     );
 
     return (
-        <div className="all-terapists-container">
+        <div className="all-therapists-container">
             <Header/>
             <div className="filters">
+                <FilterComponent categories={categories} onFilter={handleFilter}/>
+                <SpecializationFilter specializations={specializations}
+                                      onFilterSpecialization={handleSpecializationFilter}/>
+                <GenderFilter onFilterGender={handleGenderFilter}/>
+                <MeetFormatFilter onFilterMeetFormat={handleMeetFormatFilter}/>
                 <input
                     type="text"
                     placeholder="Пошук"
