@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TherapistCard from "../components/TherapistCard";
-import "../styles/terapists-page.css";
+import "../styles/therapists-page.css";
 import supabase from '../config/databaseClient';
 import FilterComponent from '../components/FilterComponent';
 import SpecializationFilter from "../components/SpecializationFilter";

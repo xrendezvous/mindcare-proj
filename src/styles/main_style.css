@@ -1,0 +1,426 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+}
+
+@media (min-width: 1024px) {
+    .content {
+        flex-direction: row;
+    }
+}
+
+.placeholder-image {
+    width: 32%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+    margin-left: 14%;
+}
+
+.text-section {
+    color: #00410a;
+    text-align: left;
+    max-width: 33%;
+    font-family: 'Craftwork Grotesk', sans-serif;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.main-description {
+    font-size: 112.5%;
+    font-weight: 600;
+}
+
+.button-group {
+    width: 120%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    justify-content: left;
+    margin-top: 10%;
+}
+
+.primary-button {
+    width: 32%;
+    height: 10%;
+    background-color: #00410a;
+    color: #fef9c3;
+    font-size: 112.5%;
+    font-weight: 700;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    border: 3px solid #00410a;
+    border-radius: 7%;
+    cursor: pointer;
+    position: relative !important;
+    transition: all 1ms ease !important;
+    padding: 15px 8px;
+}
+
+.secondary-button {
+    width: 32%;
+    height: 10%;
+    background-color: #fef9c3;
+    color: #00410a;
+    font-size: 112.5%;
+    font-weight: 700;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    border: 3px solid #00410a;
+    border-radius: 7%;
+    cursor: pointer;
+    position: relative !important;
+    transition: all 1ms ease !important;
+    padding: 15px 8px;
+}
+
+.separator {
+    color: #00410a;
+    font-size: 112.5%;
+    font-weight: 700;
+}
+
+.stats-block {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 5rem;
+    margin-left: 14%;
+    margin-top: 6%;
+}
+
+.stat-item {
+    width: 16rem;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-value {
+    color: #00410a;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Craftwork Grotesk', sans-serif;
+}
+
+.stat-descriptiona {
+    color: #00410a;
+    font-size: 112.5%;
+    font-weight: 600;
+    font-family: 'Craftwork Grotesk', sans-serif;
+}
+
+.stat-item-1 {
+    left: 0;
+}
+
+.stat-item-2 {
+    left: 311px;
+}
+
+.stat-item-3 {
+    left: 933px;
+}
+
+.stat-item-4 {
+    left: 622px;
+}
+
+.stat-item-1,
+.stat-item-2,
+.stat-item-3,
+.stat-item-4 {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.stat-item-1:hover,
+.stat-item-2:hover,
+.stat-item-3:hover,
+.stat-item-4:hover {
+    transform: scale(1.05);
+}
+
+.block3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stat-texts {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-right-image {
+    width: 30%;
+    max-width: 500px;
+    margin-left: 2%;
+    object-fit: contain;
+}
+
+.text-green {
+    color: #00410a;
+    font-family: 'Craftwork Grotesk', sans-serif;
+}
+
+.text-lg,
+.text-base {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-5xl {
+    font-size: 3rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.stat-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    margin-bottom: 1%;
+    margin-top: 5%;
+}
+
+.stat-subtitle-container {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    position: relative;
+}
+
+.stat-subtitle-container::after {
+    content: '';
+    width: 2px;
+    background-color: #14532d;
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    margin-left: -1px;
+    height: 50px;
+}
+
+
+.stat-subtitle-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.stat-description {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    text-align: left;
+    margin-bottom: 2%;
+    margin-left: 12%;
+}
+
+.accordion-container {
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+}
+
+.custom-accordion-item {
+    border: 1px solid #14532d;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.nextui-accordion-item-header {
+    background: transparent;
+    border: none;
+    color: #00410a;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.custom-accordion-content {
+    background-color: #fcfec3;
+    padding: 15px;
+    color: #00410a;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    font-size: 17px;
+}
+
+.custom-accordion-item button {
+    color: #00410a !important;
+    background-color: #fcfec3;
+    border: none;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.custom-accordion-item button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-accordion-item svg {
+    rotate: 270deg;
+}
+
+.text-container {
+    padding: 0 10%;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    color: #00410a;
+}
+
+.content-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.list-text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.list-text ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 20px;
+}
+
+.list-text li {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.final-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.text-container br {
+    margin-bottom: 10px;
+}
+
+.Group15 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 5%;
+}
+
+.Group16 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.Rectangle4,
+.Rectangle5,
+.Rectangle6,
+.Rectangle7 {
+    background-color: #fefcbf;
+    border: 2px solid #00410a;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.Rectangle4,
+.Rectangle5 {
+    width: 18rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Плавний перехід для фону */
+}
+
+.Rectangle4:hover,
+.Rectangle5:hover {
+    background-color: #00410a;
+    cursor: pointer;
+}
+
+.Rectangle4:hover .phone-numbers,
+.Rectangle5:hover .phone-numbers {
+    color: #fefcbf;
+    cursor: pointer;
+}
+
+.Rectangle6,
+.Rectangle7 {
+    width: 30rem;
+}
+
+.text-title {
+    color: #00410a;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Craftwork Grotesk', sans-serif;
+}
+
+.text-description {
+    color: #00410a;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    margin-top: 1%;
+}
+
+.phone-numbers {
+    color: #00410a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Craftwork Grotesk', sans-serif;
+    line-height: 1.5;
+    padding-left: 2%;
+    transition: color 0.3s ease;
+}

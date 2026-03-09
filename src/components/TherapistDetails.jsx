@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import "../styles/loader.css";
-import "../styles/single-therapist-page.css";
+import "../styles/therapist-page.css";
 import supabase from "../config/databaseClient";
 import Header from "./Header";
 import Star from '../assets/star.png';
