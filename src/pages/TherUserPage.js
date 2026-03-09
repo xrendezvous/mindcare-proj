@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/loader.css';
 import '../styles/user-page.css';
+import Appointments from "../components/Appointments";
 
 const TherUserPage = () => {
     const {doctor_id} = useParams();
@@ -366,11 +367,11 @@ const TherUserPage = () => {
                                 </div>
                             )}
 
-                            {/*{activeTab === 'appointments' && (*/}
-                            {/*    <div className="app-section-content-doc">*/}
-                            {/*        <Appointments doctorId={storedDoctorId}/>*/}
-                            {/*    </div>*/}
-                            {/*)}*/}
+                            {activeTab === 'appointments' && (
+                                <div className="app-section-content-doc">
+                                    <Appointments doctorId={storedDoctorId}/>
+                                </div>
+                            )}
 
                         </div>
 

@@ -59,7 +59,7 @@ const CreateAccount = () => {
         setError('');
 
         if (!formData.role) {
-            setError("Будь ласка, оберіть тип акаунту (студент чи спеціаліст).");
+            setError("Будь ласка, оберіть тип акаунту (пацієнт чи спеціаліст).");
             return;
         }
 
@@ -70,7 +70,7 @@ const CreateAccount = () => {
 
         try {
             if (formData.role === 'patient') {
-                // ===== РЕЄСТРАЦІЯ СТУДЕНТА =====
+                // ===== РЕЄСТРАЦІЯ ПАЦІЄНТА =====
                 const {data: lastPatient, error: lastPatientError} = await supabase
                     .from('patients')
                     .select('patient_id')
@@ -172,7 +172,7 @@ const CreateAccount = () => {
         <div className="createacc-page">
             <div className="logo">
                 <Frame className="frameIcon"/>
-                <div className="logoText">MindCare Students</div>
+                <div className="logoText">MindCare</div>
             </div>
 
             <div className="createacc-container">
@@ -185,6 +185,32 @@ const CreateAccount = () => {
                     {/* КРОК 1 */}
                     {currentStep === 1 && (
                         <>
+                            <div className="input-container">
+                                <p>Оберіть тип акаунту:</p>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="role"
+                                        value="patient"
+                                        checked={formData.role === 'patient'}
+                                        onChange={handleChange}
+                                    />
+                                    Пацієнт
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="role"
+                                        value="doctor"
+                                        checked={formData.role === 'doctor'}
+                                        onChange={handleChange}
+                                    />
+                                    Спеціаліст
+                                </label>
+                            </div>
+
                             <div className="input-container">
                                 <input
                                     type="text"
