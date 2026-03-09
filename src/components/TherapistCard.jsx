@@ -8,7 +8,7 @@ const TherapistCard = ({name, experience, location, specialties, professions, ph
     const remainingCount = specialties.length - 3;
 
     return (
-        <div className="card-terapist">
+        <div className="card-therapist">
             <div className="profile-image">
                 {photo ? (
                     <img src={photo} alt={name} className="profile-photo"/>
