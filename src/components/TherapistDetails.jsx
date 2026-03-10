@@ -8,6 +8,7 @@ import Star from '../assets/star.png';
 import Calendar from '../assets/calendar.png';
 import Lang from '../assets/lang.png';
 import Footer from "./Footer";
+import TherCalendar from "./TherCalendar";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 
 
@@ -281,10 +282,10 @@ const TherapistDetails = () => {
                 )}
             </div>
 
-            {/*<div id="calendar" className="calendar-section">*/}
-            {/*    <h3>Забронювати сеанс</h3>*/}
-            {/*    <TherCalendar/>*/}
-            {/*</div>*/}
+            <div id="calendar" className="calendar-section">
+                <h3>Забронювати сеанс</h3>
+                <TherCalendar/>
+            </div>
 
             <div className="accordion-container">
                 <Accordion variant="splitted">
