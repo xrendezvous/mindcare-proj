@@ -23,6 +23,8 @@
     "start:ws": "node --env-file=.env src/config/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:vitest": "vitest",
+    "test:run": "vitest run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,6 +47,13 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "tailwindcss": "^3.4.16"
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^6.0.1",
+    "jsdom": "^29.0.1",
+    "tailwindcss": "^3.4.16",
+    "vite": "^8.0.1",
+    "vitest": "^4.1.0"
   }
 }
